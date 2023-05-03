@@ -65,10 +65,10 @@
                 "summary_prune_min_weight": null,
                 "summary_path_limit": 8,
                 "summary_use_tfidf": false,
-"summary_smart_heuristic": true,
-"summary_smart_num_generic": 5,
-"summary_smart_num_specific": 5,
-"summary_smart_specific_weight_scheme": 1
+                "summary_smart_heuristic": true,
+                "summary_smart_num_generic": 5,
+                "summary_smart_num_specific": 5,
+                "summary_smart_specific_weight_scheme": 1
             }
         }
     },
