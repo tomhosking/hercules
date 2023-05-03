@@ -4,3 +4,5 @@ models/
 runs/
 herculesenv/
 data/opagg/
+output/amasum/
+output/amasum-tools/
