@@ -39,7 +39,7 @@ torchseq --test --load ./models/hercules_space/
 
 or
 
-see `./examples/Space-Eval.ipynb`
+see [`./examples/Space-Eval.ipynb`](examples/Space-Eval.ipynb)
 
 ## Training from scratch
 
