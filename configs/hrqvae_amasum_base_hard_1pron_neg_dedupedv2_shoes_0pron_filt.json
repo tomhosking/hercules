@@ -53,7 +53,7 @@
         "metrics": {
             "hrq_agg": {
                 "dataset_all": "opagg/amasum-filtered/amasum-shoes-filtered-25toks-0pronouns-charfilt-all",
-                "dataset_eval": "opagg/amasum-eval-does",
+                "dataset_eval": "opagg/amasum-eval-shoes",
                 "run_tsne": true,
                 "run_nli": true,
                 "run_specialisation": false,
