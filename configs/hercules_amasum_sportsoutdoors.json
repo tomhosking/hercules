@@ -1,7 +1,7 @@
 {
-    "name": "hrq_amasum_base_hard_eval1x12_1pron_neg_dedupedv2_homekitchen_0pron_filt",
+    "name": "hercules_amasum_sportsoutdoors",
     "tag": "opagg",
-    "group": "hrqv2/amasum",
+    "group": "release",
     "task": "seq2seq",
     "training": {
         "dataset": "json",
@@ -31,7 +31,7 @@
         "early_stopping_patience": 3
     },
     "json_dataset": {
-        "path": "opagg/amasum-noised/amasum-home-kitchen-25toks-0pronouns-tfidf2-overlap060-num5-ignorestopwords-enforceratings-enforcecategories-enforcenegation-dedupedv2-amasumfilt",
+        "path": "opagg/amasum-noised/amasum-sports-outdoors-25toks-0pronouns-tfidf2-overlap060-num5-ignorestopwords-enforceratings-enforcecategories-enforcenegation-dedupedv2-amasumfilt",
         "filename": "reviews.{split}",
         "field_map": [
             {
@@ -52,8 +52,8 @@
         "max_out_len": 50,
         "metrics": {
             "hrq_agg": {
-                "dataset_all": "opagg/amasum-filtered/amasum-home-kitchen-filtered-25toks-0pronouns-charfilt-all",
-                "dataset_eval": "opagg/amasum-eval-home-kitchen",
+                "dataset_all": "opagg/amasum-filtered/amasum-sports-outdoors-filtered-25toks-0pronouns-charfilt-all",
+                "dataset_eval": "opagg/amasum-eval-sports-outdoors",
                 "run_tsne": true,
                 "run_nli": true,
                 "run_specialisation": false,

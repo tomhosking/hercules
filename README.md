@@ -33,12 +33,28 @@ Download data/models:
 
 ## Evaluation with trained models
 
+```
+torchseq --test --load ./models/hercules_space/
+```
+
+or
+
+see `./examples/Space-Eval.ipynb`
+
 ## Training from scratch
+
+```
+torchseq --train --validate --config ./configs/hercules_space.json
+```
 
 ## Training on a new dataset
 
 Filter, generate pairs
 
 Train model
+
+```
+torchseq --train --validate --config ./configs/{your_config}.json
+```
 
 ## Citation

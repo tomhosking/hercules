@@ -1,7 +1,7 @@
 {
-    "name": "hrq_amasum_base_hard_eval1x12_1pron_neg_dedupedv2_shoes_0pron_filt",
+    "name": "hercules_amasum_electronics",
     "tag": "opagg",
-    "group": "hrqv2/amasum",
+    "group": "release",
     "task": "seq2seq",
     "training": {
         "dataset": "json",
@@ -31,7 +31,7 @@
         "early_stopping_patience": 3
     },
     "json_dataset": {
-        "path": "opagg/amasum-noised/amasum-shoes-25toks-0pronouns-tfidf2-overlap060-num5-ignorestopwords-enforceratings-enforcecategories-enforcenegation-dedupedv2-amasumfilt",
+        "path": "opagg/amasum-noised/amasum-electronics-25toks-0pronouns-tfidf2-overlap060-num5-ignorestopwords-enforceratings-enforcecategories-enforcenegation-dedupedv2-amasumfilt",
         "filename": "reviews.{split}",
         "field_map": [
             {
@@ -52,8 +52,8 @@
         "max_out_len": 50,
         "metrics": {
             "hrq_agg": {
-                "dataset_all": "opagg/amasum-filtered/amasum-shoes-filtered-25toks-0pronouns-charfilt-all",
-                "dataset_eval": "opagg/amasum-eval-shoes",
+                "dataset_all": "opagg/amasum-filtered/amasum-electronics-filtered-25toks-0pronouns-charfilt-all",
+                "dataset_eval": "opagg/amasum-eval-electronics",
                 "run_tsne": true,
                 "run_nli": true,
                 "run_specialisation": false,
@@ -68,7 +68,7 @@
                 "summary_smart_num_generic": 1,
                 "summary_smart_num_specific": 13,
                 "summary_smart_specific_weight_scheme": 8,
-                "summary_min_review_sentences":3,
+                "summary_min_review_sentences":0,
                 "summary_hotel_aspect_filter": false,
                 "summary_allow_wildcards": true,
                 "summary_amazon_filter": false,
