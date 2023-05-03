@@ -1,0 +1,5 @@
+git+https://github.com/tomhosking/torchseq.git@a6ebc10
+allennlp==2.10.1
+allennlp-models==2.10.1
+flair @ git+https://github.com/flairNLP/flair.git@f0841e39ac63e70570fdbfeecb2eefa2783b51b2
+truecase

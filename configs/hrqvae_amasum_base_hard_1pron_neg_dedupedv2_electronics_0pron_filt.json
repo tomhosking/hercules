@@ -1,0 +1,156 @@
+{
+    "name": "hrq_amasum_base_hard_eval1x12_1pron_neg_dedupedv2_electronics_0pron_filt",
+    "tag": "opagg",
+    "group": "hrqv2/amasum",
+    "task": "seq2seq",
+    "training": {
+        "dataset": "json",
+        "use_preprocessed_data": false,
+        "log_interval": 100,
+        "optimizer": {
+            "type": "adam",
+            "lr": 0.0005,
+"lr_schedule_legacy": false,
+            "beta1": 0.9,
+            "beta2": 0.98,
+            "lr_schedule": true,
+            "lr_warmup_steps": 10000
+        },
+        "batch_size": 256,
+        "optim_batch_size": 256,
+        "clip_gradient": 5,
+        "num_epochs": 100,
+        "warmup_epochs": 0,
+        "suppression_loss_weight": 0.0,
+        "label_smoothing": 0.0,
+        "early_stopping_lag": 0,
+        "reset_metrics": true,
+        "token_dropout": 0.2,
+        "kl_warmup_steps": 10000,
+        "epoch_steps": 10000,
+        "early_stopping_patience": 3
+    },
+    "json_dataset": {
+        "path": "opagg/amasum-noised/amasum-electronics-25toks-0pronouns-tfidf2-overlap060-num5-ignorestopwords-enforceratings-enforcecategories-enforcenegation-dedupedv2-amasumfilt",
+        "filename": "reviews.{split}",
+        "field_map": [
+            {
+                "type": "copy",
+                "from": "target",
+                "to": "target"
+            },
+            {
+                "type": "sample",
+                "from": "sources",
+                "to": "source"
+            }
+        ]
+    },
+    "eval": {
+        "eval_batch_size": 50,
+        "sampler": "beam",
+        "max_out_len": 50,
+        "metrics": {
+            "hrq_agg": {
+                "dataset_all": "opagg/amasum-filtered/amasum-electronics-filtered-25toks-0pronouns-charfilt-all",
+                "dataset_eval": "opagg/amasum-eval-electronics",
+                "run_tsne": true,
+                "run_nli": true,
+                "run_specialisation": false,
+                "run_oracle": true,
+                "run_purity": true,
+                "run_generate_summaries": true,
+                "run_masked_generation": false,
+                "summary_prune_min_weight": null,
+                "summary_path_limit": 15,
+                "summary_use_tfidf": false,
+                "summary_smart_heuristic": true,
+                "summary_smart_num_generic": 1,
+                "summary_smart_num_specific": 13,
+                "summary_smart_specific_weight_scheme": 8,
+                "summary_min_review_sentences":0,
+                "summary_hotel_aspect_filter": false,
+                "summary_allow_wildcards": true,
+                "summary_amazon_filter": false,
+                "summary_dedupe_output": true
+            }
+        }
+    },
+    "beam_search": {
+        "beam_width": 4,
+        "beam_expansion": 2,
+        "length_alpha": 1.0
+    },
+    "prepro": {
+        "vocab_size": 30522,
+        "sent_window": 0,
+        "tok_window": 100,
+        "concat_ctxt_ans": false,
+        "bio_tagging": true,
+        "tokenizer": "bert-base-uncased"
+    },
+    "dropout": 0.1,
+    "raw_embedding_dim": 768,
+    "encoder": {
+        "num_heads": 8,
+        "dim_feedforward": 2048,
+        "activation": "relu",
+        "bert_encoder": false,
+        "embedding_dim": 768,
+        "num_layers": 5
+    },
+    "decoder": {
+        "num_heads": 8,
+        "dim_feedforward": 2048,
+        "activation": "relu",
+        "bert_encoder": false,
+        "embedding_dim": 768,
+        "num_layers": 5
+    },
+    "onehot_bio": false,
+    "bio_embedding_dim": 8,
+    "freeze_embeddings": true,
+    "freeze_projection": true,
+    "directional_masks": true,
+    "bottleneck": {
+        "modular": true,
+        "embedding_dim": 768,
+        "num_heads": 8,
+        "modules": [
+            {
+                "range": [
+                    0,
+                    8
+                ],
+                "type": "hrqvae",
+                "pooling": true,
+                "quantizer": {
+                    "codebook_size": 12,
+                    "num_heads": 12,
+                    "head_dropout": 0.05,
+                    "head_dropout_keep_first": false,
+                    "init_decay_weight": 0.5,
+                    "init_scale": 1.0,
+                    "init_embeds_xavier": false,
+                    "init_embeds_truncnorm": false,
+                    "init_embeds_uniform": true,
+                    "gumbel_temp": 1.0,
+                    "temp_schedule": true,
+                    "temp_schedule_gamma": 33333,
+                    "temp_min": 0.5,
+                    "include_residual": false,
+                    "kl_weight": 0.0025,
+                    "sqrt_distances": false,
+                    "init_sphere": true,
+                    "commitment_weight": 0,
+                    "pre_norm": false,
+                    "demean_inputs": false,
+                    "soft_gumbel": false,
+                    "adaptive_depth": false,
+                    "norm_loss_weight": 0.05,
+                    "norm_loss_scale": 1.5
+                }
+            }
+        ]
+    }
+}
