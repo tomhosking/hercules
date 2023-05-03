@@ -26,10 +26,11 @@ pip install -r requirements.txt
 ```
 
 Download data/models:
- - [Space](http://tomho.sk/hercules/data/data_space.zip) -> `./data/`
- - [AmaSum](http://tomho.sk/hercules/data/data_amasum.zip) -> `./data/`
+ - [Space](http://tomho.sk/hercules/data/data_space.zip) -> `./data/opagg/`
+ - [AmaSum](http://tomho.sk/hercules/data/data_amasum.zip) -> `./data/opagg/`
  - [Trained checkpoints](http://tomho.sk/hercules/models/) -> `./models`
 
+Tested with Python 3.9.
 
 ## Evaluation with trained models
 
@@ -40,6 +41,21 @@ torchseq --test --load ./models/hercules_space/
 or
 
 see [`./examples/Space-Eval.ipynb`](examples/Space-Eval.ipynb)
+
+or 
+
+```python
+from torchseq.utils.model_loader import model_from_path
+from torchseq.metric_hooks.hrq_agg import HRQAggregationMetricHook
+
+model_slug = 'hercules_space' # Which model to load?
+
+instance = model_from_path('./models/' + model_slug, output_path='./runs/', data_path='./data/', silent=True)
+
+scores, res = HRQAggregationMetricHook.eval_generate_summaries_and_score(instance.config, instance, test=True)
+
+print("Model {:}: Abstractive R2 = {:0.2f}, Extractive R2 = {:0.2f}".format(model_slug, scores['abstractive']['rouge2'], scores['extractive']['rouge2']))
+```
 
 ## Training from scratch
 
