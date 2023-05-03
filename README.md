@@ -1,6 +1,6 @@
 # [Hercules: Attributable and Scalable Opinion Summarization](#)
 
-![Idealised diagram of Hercules](/web/explanation_mini.png)
+<img src="web/explanation_mini.png" width="300" />
 
 Code for the paper "[Attributable and Scalable Opinion Summarization](#)", Hosking et al. (ACL 2023).
 
