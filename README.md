@@ -2,7 +2,7 @@
 
 <img src="web/explanation_mini.png" width="300" />
 
-Code for the paper "[Attributable and Scalable Opinion Summarization](#)", Hosking et al. (ACL 2023).
+Code for the paper "[Attributable and Scalable Opinion Summarization](#)", Tom Hosking, Hao Tang & Mirella Lapata (ACL 2023).
 
 By representing sentences from reviews as paths through a discrete hierarchy, we can generate abstractive summaries that are informative, attributable and scale to hundreds of input reviews.
 
