@@ -22,13 +22,23 @@
             <p class="lead">By representing sentences from reviews as paths through a discrete hierarchy, we can generate abstractive summaries that are informative, attributable and scale to hundreds of input reviews.</p>
             <p>We propose a method for unsupervised opinion summarization that encodes sentences from customer reviews into a hierarchical discrete latent space, then identifies common opinions based on the frequency of their encodings. We are able to generate both abstractive summaries by decoding these frequent encodings, and extractive summaries by selecting the sentences assigned to the same frequent encodings. Our method is attributable, because the model identifies sentences used to generate the summary as part of the summarization process. It scales easily to many hundreds of input reviews, because aggregation is performed in the latent space rather than over long sequences of tokens. We also demonstrate that our model enables a degree of control, generating aspect-specific summaries by restricting the model to parts of the encoding space that correspond to desired aspects (e.g. location or food). Automatic and human evaluation on two datasets from different domains demonstrates that our method generates summaries that are more informative than prior approaches and better grounded in the input reviews.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <a href="#" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Paper</a>
+              <a href="https://arxiv.org/abs/2305.11603" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Paper</a>
               <a href="http://github.com/tomhosking/hercules" type="button" class="btn btn-outline-secondary btn-lg px-4">Code</a>
               <a href="models/" type="button" class="btn btn-outline-secondary btn-lg px-4">Download Models</a>
             </div>
+            <div class="card m-2">
+              <pre class="p-1 m-0 card-body"><code>@misc{hosking2023attributable,
+  title={Attributable and Scalable Opinion Summarization}, 
+  author={Tom Hosking and Hao Tang and Mirella Lapata},
+  year={2023},
+  eprint={2305.11603},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL}
+}</code></pre>
           </div>
         </div>
       </div>
+    </div>
     
 
     <!-- Optional JavaScript; choose one of the two! -->

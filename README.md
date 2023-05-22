@@ -2,7 +2,7 @@
 
 <img src="web/explanation_mini.png" width="300" />
 
-Code for the paper "[Attributable and Scalable Opinion Summarization](#)", Tom Hosking, Hao Tang & Mirella Lapata (ACL 2023).
+Code for the paper "[Attributable and Scalable Opinion Summarization](https://arxiv.org/abs/2305.11603)", Tom Hosking, Hao Tang & Mirella Lapata (ACL 2023).
 
 By representing sentences from reviews as paths through a discrete hierarchy, we can generate abstractive summaries that are informative, attributable and scale to hundreds of input reviews.
 
@@ -74,3 +74,14 @@ torchseq --train --validate --config ./configs/{your_config}.json
 ```
 
 ## Citation
+
+```
+@misc{hosking2023attributable,
+  title={Attributable and Scalable Opinion Summarization}, 
+  author={Tom Hosking and Hao Tang and Mirella Lapata},
+  year={2023},
+  eprint={2305.11603},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL}
+}
+````
