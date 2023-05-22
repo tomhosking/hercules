@@ -1,4 +1,4 @@
-# [Hercules: Attributable and Scalable Opinion Summarization](#)
+# [Hercules: Attributable and Scalable Opinion Summarization](https://arxiv.org/abs/2305.11603)
 
 <img src="web/explanation_mini.png" width="300" />
 
