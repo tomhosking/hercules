@@ -57,21 +57,29 @@ scores, res = HRQAggregationMetricHook.eval_generate_summaries_and_score(instanc
 print("Model {:}: Abstractive R2 = {:0.2f}, Extractive R2 = {:0.2f}".format(model_slug, scores['abstractive']['rouge2'], scores['extractive']['rouge2']))
 ```
 
-## Training from scratch
+## Training on SPACE/AmaSum from scratch
+
+To train on SPACE, download the datasets (as above) then you should just be able to run:
 
 ```
-torchseq --train --validate --config ./configs/hercules_space.json
+torchseq --train --reload_after_train --validate --config ./configs/hercules_space.json
 ```
 
-## Training on a new dataset
+## Training on a new dataset (WIP)
 
-Filter, generate pairs
+You will need to: 
 
-Train model
+- [ ] Make a copy of your dataset in a format expected by the script below
+- [ ] Run the dataset filtering scripts `./scripts/opagg_filter_space.py` and `./scripts/opagg_filter_space_eval.py`
+- [ ] Run the script to generate training pairs `./scripts/generate_opagg_pairs.py`
+- [ ] Make a copy of one of the training configs and update to point at your data
+- [ ] Finally, train the model!
 
 ```
-torchseq --train --validate --config ./configs/{your_config}.json
+torchseq --train --reload_after_train --validate --config ./configs/{YOUR_CONFIG}.json
 ```
+
+Please feel free to raise a Github issue or email me if you run into any difficulties!
 
 ## Citation
 
