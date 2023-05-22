@@ -1,5 +1,8 @@
 # [Hercules: Attributable and Scalable Opinion Summarization](https://arxiv.org/abs/2305.11603)
 
+	
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/attributable-and-scalable-opinion/unsupervised-opinion-summarization-on-space)](https://paperswithcode.com/sota/unsupervised-opinion-summarization-on-space?p=attributable-and-scalable-opinion)
+
 <img src="web/explanation_mini.png" width="300" />
 
 Code for the paper "[Attributable and Scalable Opinion Summarization](https://arxiv.org/abs/2305.11603)", Tom Hosking, Hao Tang & Mirella Lapata (ACL 2023).
