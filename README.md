@@ -72,6 +72,7 @@ torchseq --train --reload_after_train --validate --config ./configs/hercules_spa
 
 You will need to: 
 
+- [ ] Install `allennlp==2.10.1` and `allennlp-models==2.10.1` via pip (ignore the warnings about version conflicts)
 - [ ] Make a copy of your dataset in a format expected by the script below
 - [ ] Run the dataset filtering scripts `./scripts/opagg_filter_space.py` and `./scripts/opagg_filter_space_eval.py`
 - [ ] Run the script to generate training pairs `./scripts/generate_opagg_pairs.py`
