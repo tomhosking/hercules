@@ -29,8 +29,8 @@ pip install -r requirements.txt
 ```
 
 Download data/models:
- - [Space](http://tomho.sk/hercules/data/data_space.zip) -> `./data/opagg/`
- - [AmaSum](http://tomho.sk/hercules/data/data_amasum.zip) -> `./data/opagg/`
+ - <a href="https://tomho.sk/hercules/data/data_space.zip" download>Space</a> -> `./data/opagg/`
+ - <a href="https://tomho.sk/hercules/data/data_amasum.zip" download>AmaSum</a> -> `./data/opagg/`
  - [Trained checkpoints](http://tomho.sk/hercules/models/) -> `./models`
 
 Tested with Python 3.9.
