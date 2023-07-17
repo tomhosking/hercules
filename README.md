@@ -88,12 +88,17 @@ Please feel free to raise a Github issue or email me if you run into any difficu
 ## Citation
 
 ```
-@misc{hosking2023attributable,
-  title={Attributable and Scalable Opinion Summarization}, 
-  author={Tom Hosking and Hao Tang and Mirella Lapata},
-  year={2023},
-  eprint={2305.11603},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL}
+@inproceedings{hosking-etal-2023-attributable,
+  title = "Attributable and Scalable Opinion Summarization",
+  author = "Hosking, Tom  and
+      Tang, Hao  and
+      Lapata, Mirella",
+  booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  month = jul,
+  year = "2023",
+  address = "Toronto, Canada",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2023.acl-long.473",
+  pages = "8488--8505",
 }
 ````
