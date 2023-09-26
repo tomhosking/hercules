@@ -37,13 +37,7 @@ Tested with Python 3.9.
 
 ## Evaluation with trained models
 
-```
-torchseq --test --load ./models/hercules_space/
-```
-
-or
-
-see [`./examples/Space-Eval.ipynb`](examples/Space-Eval.ipynb)
+See [`./examples/Space-Eval.ipynb`](examples/Space-Eval.ipynb)
 
 or 
 
