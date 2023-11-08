@@ -1,11 +1,11 @@
-# [Hercules: Attributable and Scalable Opinion Summarization](https://aclanthology.org/2022.acl-long.178/)
+# [Hercules: Attributable and Scalable Opinion Summarization](https://aclanthology.org/2023.acl-long.473/)
 
 	
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/attributable-and-scalable-opinion/unsupervised-opinion-summarization-on-space)](https://paperswithcode.com/sota/unsupervised-opinion-summarization-on-space?p=attributable-and-scalable-opinion)
 
 <img src="web/explanation_mini.png" width="300" />
 
-Code for the paper "[Attributable and Scalable Opinion Summarization](https://aclanthology.org/2022.acl-long.178/)", Tom Hosking, Hao Tang & Mirella Lapata (ACL 2023).
+Code for the paper "[Attributable and Scalable Opinion Summarization](https://aclanthology.org/2023.acl-long.473/)", Tom Hosking, Hao Tang & Mirella Lapata (ACL 2023).
 
 By representing sentences from reviews as paths through a discrete hierarchy, we can generate abstractive summaries that are informative, attributable and scale to hundreds of input reviews.
 
